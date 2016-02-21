@@ -10,7 +10,9 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.dimitri;
+package com.dimitri.models;
+
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,18 +25,23 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Task {
+public class Tasks {
 	
 	@Id @GeneratedValue
 	private Long id;
 	private String taskname;
+	private Date performdate;
+	private String category;
+	private String priority;
 	
-	public Task(String taskname) {
-		super();
+	public Tasks(String taskname, Date performdate, String category, String priority) {
 		this.taskname = taskname;
+		this.performdate = performdate;
+		this.category = category;
+		this.priority = priority;
 	}
-	
-	public Task(){
+
+	public Tasks(){
 	}
 
 	public Long getId() {
@@ -45,11 +52,25 @@ public class Task {
 		return taskname;
 	}
 
+	public String getTaskname() {
+		return taskname;
+	}
+
+	public Date getPerformdate() {
+		return performdate;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public String getPriority() {
+		return priority;
+	}
+
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", taskname=" + taskname + "]";
+		return "Task [id=" + id + ", taskname=" + taskname + ", performdate=" + performdate + ", category=" + category
+				+ ", priority=" + priority + "]";
 	}
-	
-	
-	
 }

@@ -1,4 +1,4 @@
-insert into Task(taskname)values('Practice Java.');
-insert into Task(taskname)values('Read blog articles.');
-insert into Task(taskname)values('Eat Something.');
-insert into Task(taskname)values('Sleep.');
+insert into Tasks(taskname,performdate,category,priority)values('Practice Java.',NOW(),'Activities','HIGH');
+insert into Tasks(taskname,performdate,category,priority)values('Read blog articles.',NOW(),'Activities','VERY HIGH');
+insert into Tasks(taskname,performdate,category,priority)values('Eat Something.',NOW(),'Other','LOW');
+insert into Tasks(taskname,performdate,category,priority)values('Sleep.',NOW(),'Other','MEDIUM');

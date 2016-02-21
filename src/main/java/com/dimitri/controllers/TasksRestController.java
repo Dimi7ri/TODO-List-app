@@ -11,13 +11,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dimitri;
+package com.dimitri.controllers;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.dimitri.models.Tasks;
+import com.dimitri.repositories.TasksRepository;
 
 /**
  * 
@@ -29,7 +32,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TasksRestController {
 	
 	@RequestMapping("/tasks")
-	Collection<Task> tasks(){
+	Collection<Tasks> tasks(){
 		return this.tasksRepository.findAll();
 	}
 	

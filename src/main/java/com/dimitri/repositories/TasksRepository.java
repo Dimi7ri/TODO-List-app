@@ -10,10 +10,14 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.dimitri;
+package com.dimitri.repositories;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dimitri.models.Tasks;
+
 
 /**
  * 
@@ -21,9 +25,7 @@ import org.springframework.stereotype.Component;
  *
  */
 
-@Component
-public class TasksCommandLineRunner implements CommandLineRunner {
-	@Override
-	public void run(String... args)throws Exception{
-	}
+public interface TasksRepository extends JpaRepository<Tasks, Long> {
+
+	Collection<Tasks> findBytaskname(String taskname);
 }
