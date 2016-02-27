@@ -15,8 +15,12 @@ package com.dimitri.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * 
@@ -29,12 +33,20 @@ public class Tasks {
 	
 	@Id @GeneratedValue
 	private Long id;
+	
+	@NotNull
+	@Size(min=2, max=30)
 	private String taskname;
 	private Date performdate;
-	private String category;
-	private String priority;
 	
-	public Tasks(String taskname, Date performdate, String category, String priority) {
+	@Size(min=2, max=15)
+	private String category;
+	
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	private Priority priority;
+	
+	public Tasks(String taskname, Date performdate, String category, Priority priority){
 		this.taskname = taskname;
 		this.performdate = performdate;
 		this.category = category;
@@ -44,12 +56,16 @@ public class Tasks {
 	public Tasks(){
 	}
 
-	public Long getId() {
+	public Long getId(){
 		return id;
 	}
 
-	public String getName() {
+	public String getName(){
 		return taskname;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getTaskname() {
@@ -64,7 +80,7 @@ public class Tasks {
 		return category;
 	}
 
-	public String getPriority() {
+	public Priority getPriority() {
 		return priority;
 	}
 
@@ -73,4 +89,5 @@ public class Tasks {
 		return "Task [id=" + id + ", taskname=" + taskname + ", performdate=" + performdate + ", category=" + category
 				+ ", priority=" + priority + "]";
 	}
+	
 }

@@ -10,25 +10,16 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.dimitri.repositories;
-
-import java.util.Collection;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.dimitri.models.Tasks;
-
+package com.dimitri.models;
 
 /**
  * 
  * @author Dimitri Vasiliev
  *
  */
-
-public interface TasksRepository extends JpaRepository<Tasks, Long> {
-
-	Collection<Tasks> findBytaskname(String taskname);
-	Collection<Tasks> findBytasknameStartsWithIgnoreCase(String taskname);
-	
-	
+public enum Priority {
+    LOW,
+    MEDIUM,
+    HIGH,
+    IMPORTANT
 }
