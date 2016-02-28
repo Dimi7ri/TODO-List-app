@@ -18,7 +18,7 @@ Normally, setting up all technologies we are going to use required a lot of time
 * Spring Boot provided Spring framework dependencies and embed Tomcat, JPA, H2, JDBC, log4j over slf4j, Jackson, Hibernate, jUnit, Dom4j 3rd party dependencies.
 * No more XML hard to understand configuration files, but Annotation Based configuration.
 * Included also security, metrics, health checks, externalized configuration so our app is ready for production.
-* Very useful 'starter' POMs with a plug & play effect almost, to add any external tools we want.
+* Very useful 'starter' POMs for Mave with a plug & play effect almost, to add any external tools we want.
 
 ---
 
