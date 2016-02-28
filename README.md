@@ -11,7 +11,7 @@
 ### Spring Boot Overview.
 Spring Boot aims to provide Quick Start development in production level Spring applications and services.
 Basically, with a couple of clicks you get your configuration, tools and libraries started and you are ready to develop your application. <br /> 
-In the case of this project, since this is a Web-App I used **Spring Boot 1.3.2** and selected **JPA**, **Web** and **H2**. 
+In the case of this project, since this is a Web-App I used **[Spring Boot 1.3.2](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)**  and selected **[JPA](http://docs.spring.io/spring-data/jpa/docs/1.4.3.RELEASE/reference/html/jpa.repositories.html)**, **Web** and **[H2](http://www.h2database.com/)**. 
 Spring boot downloaded and configured all Spring and 3rd party libraries for me, in a matter of minutes.
 Normally, setting up all technologies we are going to use required a lot of time and unnecesary effort.
 
