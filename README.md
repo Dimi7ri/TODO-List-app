@@ -23,7 +23,7 @@ Normally, setting up all technologies we are going to use required a lot of time
 
 ---
 
-### Spring Data Overview.
+#### Spring Data Overview.
 Spring Data adds a very convinient extra layer of abstraction on top of our JPA provider that simplifies persistence.
 This layer of abtraction is called Repository and reduces the amount of repetitive code needed to implement data access significantly,  **[for more details.](http://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html)**
 <br/>The implementation option are:<br/>
@@ -43,7 +43,7 @@ Note that I use **JpaRepository** interface in this project..
 * To explain AngularJS further I created this repository **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)** for official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
 <br /> 
 
-### The front-end of this project is structured this way: </br>
+##### The front-end of this project is structured this way: </br>
 /public<br />
 ----------/controllers<br />
 --------------------mainController.js<br />
