@@ -35,9 +35,32 @@ Note that I use **JpaRepository** interface in this project..
 
 ### AngularJS and REST Overview.
 **[AngularJS](https://github.com/angular/angular.js)** is a front-end open source web application framework developed by Adam Abrons and Misko Hevery and now maintained by Google. <br />
-AngularJS makes "Single Page Applications" extending HTML by using Directives to express the behaviour of our app. Also separating Client and Server, allowing us to develop and test each Side independently.<br />
-The **only** way the Front End communicates with the Back End is through JSON REST API.<br />
-Since each element is loaded once, bandwidth usage is decreased significantly, also improving response speed, in comparison to classic request and response cycles in Client-Server technologies.<br />
-AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.
+* AngularJS makes "Single Page Applications" extending HTML by using Directives to express the behaviour of our app. Also separating Client and Server, allowing us to develop and test each Side independently.<br />
+* The **only** way the Front End communicates with the Back End is through JSON REST API.<br />
+* Since each element is loaded once, bandwidth usage is decreased significantly, also improving response speed, in comparison to classic request and response cycles in Client-Server technologies.<br />
+* AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.<br />
+* To explain AngularJS further I created this repository **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)** for official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
+<br /> 
 
+### The front-end of this project is structured this way: </br>
+public**/<br />
+----------**controllers**<br />
+--------------------mainController.js<br />
+--------------------otherController.js<br />
+----------**css**<br />
+--------------------boostrap.min.js<br />
+----------**fonts**<br />
+--------------------glyphicons<br />
+----------**js**<br />
+--------------------angular-route.min.js<br />
+--------------------angular.min.js<br />
+--------------------boostrap.min.js<br />
+----------**services**<br />
+--------------------serviceOrFactory1.js<br />
+--------------------serviceOrFactory2.js<br />
+----------**views**<br />
+--------------------MainView.html<br />
+--------------------otherView.html<br />
+----------app.js<br />
+----------index.html<br />
 
