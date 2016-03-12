@@ -83,11 +83,4 @@ public class Tasks {
 	public Priority getPriority() {
 		return priority;
 	}
-
-	@Override
-	public String toString() {
-		return "Task [id=" + id + ", taskname=" + taskname + ", performdate=" + performdate + ", category=" + category
-				+ ", priority=" + priority + "]";
-	}
-	
 }

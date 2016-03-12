@@ -37,12 +37,12 @@ import com.dimitri.repositories.TasksRepository;
 public class TasksRestController {
 	
 	@RequestMapping("/tasks")
-	Collection<Tasks> tasks(){
+	public Collection<Tasks> tasks(){
 		return this.tasksRepository.findAll();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/task={id}")
-	Tasks getTaskDetails(@PathVariable("id") Long id){
+	public Tasks getTaskDetails(@PathVariable("id") Long id){
 	    return tasksRepository.findOne(id);
 	}
 
@@ -53,15 +53,15 @@ public class TasksRestController {
 	}
 	
 	@RequestMapping(method = RequestMethod.DELETE, value="/task={id}")
-	 public void deleteTask(@PathVariable("id") Long id){
+	public void deleteTask(@PathVariable("id") Long id){
 		tasksRepository.delete(id);
-	 }
+	}
 	
 	@RequestMapping(method = RequestMethod.PUT, value="/task={id}")
-	 public void editTask(@RequestBody @Valid Tasks editedTask ,@PathVariable("id") Long id){
+	public void editTask(@RequestBody @Valid Tasks editedTask ,@PathVariable("id") Long id){
 		editedTask.setId(id);
 		tasksRepository.saveAndFlush(editedTask);
-	 }
+	}
 	
 	@Autowired TasksRepository tasksRepository;
 }
