@@ -5,6 +5,7 @@
 * Hibernate (Using Spring Data JPA)
 * HTML5
 * AngularJS
+* Bootstrap (couldn't resist)
 
 ---
 
