@@ -45,21 +45,21 @@ Note that I use **JpaRepository** interface in this project..
 
 ### The front-end of this project is structured this way: </br>
 public**/<br />
-----------**/controllers**<br />
+----------/**controllers**<br />
 --------------------mainController.js<br />
 --------------------otherController.js<br />
-----------**/css**<br />
+----------/**css**<br />
 --------------------boostrap.min.js<br />
-----------**/fonts**<br />
+----------/**fonts**<br />
 --------------------glyphicons<br />
-----------**/js**<br />
+----------/**js**<br />
 --------------------angular-route.min.js<br />
 --------------------angular.min.js<br />
 --------------------boostrap.min.js<br />
-----------**/services**<br />
+----------/**services**<br />
 --------------------serviceOrFactory1.js<br />
 --------------------serviceOrFactory2.js<br />
-----------**/views**<br />
+----------/**views**<br />
 --------------------MainView.html<br />
 --------------------otherView.html<br />
 ----------app.js<br />
