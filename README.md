@@ -44,7 +44,7 @@ Note that I use **JpaRepository** interface in this project..
 <br /> 
 
 ### The front-end of this project is structured this way: </br>
-public**/<br />
+/public<br />
 ----------/controllers<br />
 --------------------mainController.js<br />
 --------------------otherController.js<br />
