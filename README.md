@@ -29,4 +29,4 @@ This layer of abtraction is called Repository and reduces the amount of repetiti
 * **[CrudRepository](http://docs.spring.io/spring-data/data-commons/docs/1.2.1.RELEASE/api/org/springframework/data/repository/CrudRepository.html)** mainly for CRUD methods.<br/> 
 * **[PagingAndSortingRepository](http://docs.spring.io/spring-data/data-commons/docs/1.2.0.M1/api/org/springframework/data/repository/PagingAndSortingRepository.html)** with some additional methods on top of CrudRepository <br/> 
 * **[JpaRepository](http://docs.spring.io/spring-data/data-jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)** for JPA methods.<br/>
-Note that I use **JpaRepository** interface in this project.
+Note that I use **JpaRepository** interface in this project..
