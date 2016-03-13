@@ -46,8 +46,8 @@ Note that I use **JpaRepository** interface in this project..
 ##### The front-end of this project is structured this way: </br>
 /public<br />
 ----------/controllers<br />
---------------------mainController.js<br />
---------------------otherController.js<br />
+--------------------Controller1.js<br />
+--------------------Controller2.js<br />
 ----------/css<br />
 --------------------boostrap.min.js<br />
 ----------/fonts<br />
@@ -60,8 +60,8 @@ Note that I use **JpaRepository** interface in this project..
 --------------------serviceOrFactory1.js<br />
 --------------------serviceOrFactory2.js<br />
 ----------/views<br />
---------------------MainView.html<br />
---------------------otherView.html<br />
+--------------------View1.html<br />
+--------------------View2.html<br />
 ----------app.js<br />
 ----------index.html<br />
 
