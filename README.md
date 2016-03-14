@@ -40,7 +40,7 @@ Note that I use **JpaRepository** interface in this project..
 * The **only** way the Front End communicates with the Back End is through JSON REST API.<br />
 * Since each element is loaded once, bandwidth usage is decreased significantly, also improving response speed, in comparison to classic request and response cycles in Client-Server technologies.<br />
 * AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.<br />
-* To explain AngularJS further I created this repository **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)** for official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
+* To explain AngularJS further I created this repository **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)**. For official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
 <br /> 
 
 ##### The front-end of this project is structured this way: </br>
