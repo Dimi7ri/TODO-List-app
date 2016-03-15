@@ -37,7 +37,7 @@ Note that I use **JpaRepository** interface in this project..
 ### AngularJS and REST Overview.
 **[AngularJS](https://github.com/angular/angular.js)** is a front-end open source web application framework developed by Adam Abrons and Misko Hevery and now maintained by Google. <br />
 * AngularJS makes "Single Page Applications" extending HTML by using Directives to express the behaviour of our app. Also separating Client and Server, allowing us to develop and test each Side independently.<br />
-* The **only** way the Front End communicates with the Back End is through JSON REST API.<br />
+* The **only** way the Front End communicates with the Back End is through JSON REST API **[JSON](http://www.json.org/)**.<br />
 * Since each element is loaded once, bandwidth usage is decreased significantly, also improving response speed, in comparison to classic request and response cycles in Client-Server technologies.<br />
 * AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.<br />
 * To explain AngularJS further I created this repository **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)**. For official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
