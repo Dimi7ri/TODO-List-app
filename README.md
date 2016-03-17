@@ -1,11 +1,11 @@
 # TODO-List-app
 <br /> The purpose of this project is to write a To Do Tasks List using:
-* Spring Boot 
-* REST services
+* Spring Boot (v1.3.2)
+* **[REST](https://spring.io/understanding/REST)** 
 * Hibernate (Using Spring Data JPA)
 * HTML5
-* AngularJS
-* Bootstrap (couldn't resist)
+* AngularJS (v1.5.0)
+* Bootstrap (v3.3.6)
 
 ---
 
