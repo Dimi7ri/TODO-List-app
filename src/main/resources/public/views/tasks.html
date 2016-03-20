@@ -1,4 +1,5 @@
-<div class="container"> 
+<div class="container">
+   	<h1><span class="glyphicon glyphicon-time"></span> Pending tasks</h1>
 	<div class="col-xs-4">
 		<div class="input-group">
     		<input type="text" class="form-control" ng-model="searchText"/>
@@ -7,7 +8,6 @@
     		</span>
     	</div>	
     </div>
-
 	<table class="table table-hover">
     	<thead>
       		<tr>
@@ -18,12 +18,17 @@
       		</tr>
     	</thead>
     	<tbody>
-      		<tr ng-repeat="task in tasks | filter:searchText">
+      		<tr ng-repeat="task in tasks | filter:searchText | orderBy:'-id'">
         		<td>{{task.taskname}}</td>
-        		<td>{{task.performdate | date:'MM/dd/yyyy @ h:mma'}}</td>
+        		<td>{{task.performdate | date:'dd/MM/yyyy @ h:mma'}}</td>
         		<td>{{task.category}}</td>
         		<td>{{task.priority}}</td>
-      		</tr>
+      		</tr>     		
    		</tbody>
   	</table>
+  	<a href="#/addTask">
+		<button type=button class="btn btn-default" >
+			<span class="glyphicon glyphicon-plus" ></span>
+		</button> 
+	</a>			   	
 </div>

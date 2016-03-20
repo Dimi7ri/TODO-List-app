@@ -2,17 +2,19 @@
 <html ng-app='ToDoListApp'> 
 <head>
 	<title>TODO-List-app</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>	
 </head>
 <body>
-   	<div class="container"> 
-    	<h1><span class="glyphicon glyphicon-time"></span> Pending tasks</h1>
-    	<div ng-view ></div>
-   	</div> 
+    <div ng-view ></div>
+    
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>    
+    
     <script src="app.js"></script>
-    <script src="controllers/TasksController.js"></script>
-    <script src="services/tasksFactory.js"></script>
+    
+    <script src="controllers/tasksControllers.js"></script>
+    <script src="services/tasksFactories.js"></script>
+    
 </body>
 </html>

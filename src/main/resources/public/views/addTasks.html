@@ -1,0 +1,66 @@
+<div class="container">
+	<form name="addTasks" ng-controller="AddTasksController as addNewTaskCtrl" ng-submit="addTasks.$valid && addNewTaskCtrl.addTask(addNewTaskCtrl)" novalidate>
+		<h1><span class="glyphicon glyphicon-time"></span>Add Tasks</h1>
+			
+			<!-- Live Preview -->
+		<table class="table table-bordered">
+	    	<thead>
+	      		<tr>
+	        		<th class="text-info"><h4>Task Name</h4></th>
+	        		<th class="text-info"><h4>Date</h4></th>
+	        		<th class="text-info"><h4>Category</h4></th>
+	        		<th class="text-info"><h4>Priority</h4></th>	
+	      		</tr>
+	    	</thead>
+	    	<tbody>
+	      		<tr>
+	        		<td height="40">{{addNewTaskCtrl.taskname}}</td>
+	        		<td>{{addNewTaskCtrl.performdate | date:'dd/MM/yyyy @ h:mma'}}</td>
+	        		<td>{{addNewTaskCtrl.category}}</td>
+	        		<td>{{addNewTaskCtrl.priority}}</td>
+	      		</tr>     		
+	   		</tbody>
+	  	</table>
+	  	
+	  		<!-- Task Name -->		
+        <fieldset class="form-group" ng-class="{ 'has-error' : addTasks.taskname.$invalid && !addTasks.taskname.$pristine }">
+            <label class="control-label">Task Name</label>
+            <input class="form-control" ng-model="addNewTaskCtrl.taskname" ng-minlength="2" ng-maxlength="30" name="taskname" placeholder="Write task name or brief description." required></input>
+            <p ng-show="addTasks.taskname.$error.minlength" class="help-block">Task Name is too short.</p>
+            <p ng-show="addTasks.taskname.$error.maxlength" class="help-block">Task Name is too long.</p>			
+		</fieldset>
+		
+			<!-- PERFORM DATE TODO -->	
+		<fieldset class="form-group">
+			<label class="control-label">Scheduled Date</label>
+            <input class="form-control" type="date" ng-model="addNewTaskCtrl.performdate" required ></input>
+		</fieldset>
+		
+			<!-- CATEGORY -->	
+		<fieldset class="form-group" ng-class="{ 'has-error' : addTasks.category.$invalid && !addTasks.category.$pristine }">
+			<label class="control-label">Category</label>
+			<input class="form-control" ng-model="addNewTaskCtrl.category" ng-minlength="5" ng-maxlength="15" name="category" placeholder="Write a category for this task." required></input>
+            <p ng-show="addTasks.category.$error.minlength" class="help-block">Task Name is too short.</p>
+            <p ng-show="addTasks.category.$error.maxlength" class="help-block">Task Name is too long.</p>		
+		</fieldset>
+		
+			<!-- PRIORITY -->	
+		<fieldset class="form-group" ng-controller="TasksPrioritiesListController" ng-class="{ 'has-error' : addTasks.priority.$invalid && !addTasks.priority.$pristine }">
+			<label class="control-label">Priority</label>
+   			<select class="form-control" ng-model="addNewTaskCtrl.priority"  ng-options="o as o for o in items"  name="priority" required>
+   				<option value="" selected>Select Priority</option>
+   			</select>
+   			<p ng-show="addTasks.priority.$invalid && !addTasks.priority.$pristine" class="help-block">Select Priority.</p>
+		</fieldset>  	
+			
+			<!-- SUBMIT  -->
+		<fieldset class="form-group">
+			<a href="#/">
+				<button type=button class="btn btn-default" >
+					<span class="glyphicon glyphicon-arrow-left" ></span>
+				</button> 
+			</a>	
+			<input type="submit" class="btn btn-primary pull-right" value="Add Task" />
+		</fieldset>
+	</form>
+</div>
