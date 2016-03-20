@@ -49,7 +49,7 @@ Note that I use **JpaRepository** interface in this project..
 --------------------Controller1.js<br />
 --------------------Controller2.js<br />
 ----------/css<br />
---------------------boostrap.min.js<br />
+--------------------boostrap.min.css<br />
 ----------/fonts<br />
 --------------------glyphicons<br />
 ----------/js<br />
