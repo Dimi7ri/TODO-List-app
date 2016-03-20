@@ -53,9 +53,9 @@ Note that I use **JpaRepository** interface in this project..
 ----------/fonts<br />
 --------------------glyphicons<br />
 ----------/js<br />
---------------------angular-route.min.js<br />
 --------------------angular.min.js<br />
---------------------boostrap.min.js<br />
+--------------------angular-route.min.js<br />
+--------------------angular-resource.min.js<br />
 ----------/services<br />
 --------------------serviceOrFactory1.js<br />
 --------------------serviceOrFactory2.js<br />
