@@ -41,7 +41,11 @@ Note that I use **JpaRepository** interface in this project..
 * Since each element is loaded once, bandwidth usage is decreased significantly, also improving response speed, in comparison to classic request and response cycles in Client-Server technologies.<br />
 * AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.<br />
 * To explain AngularJS further I created this repository. **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)**. For official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
-<br /> 
+<br />
+* ngRoute
+<br/> 
+* ngResource
+<br>
 
 ##### The front-end of this project is structured this way: </br>
 /public<br />
