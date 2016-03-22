@@ -42,7 +42,9 @@ Note that I use **JpaRepository** interface in this project..
 * AngularJS makes the browser look more like a WebApp than a WebPage using JavaScript that is executed in the browser.<br />
 * To explain AngularJS further I created this repository. **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)**. For official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
 <br />
-* ngRoute
+* ngRoute : Is a module that provides single page application functionality using routing and deeplinking services and directives. Basically, I included angular-route.min.js to my index.html and included ng-view directive. Then I added $routeProvider and ngRoute dependency to my app.js file. And finaly I used routeProvider and route to deep link controllers with views (htmls). As a result my webapp is now a single page app that can switch views without requesting new data to the server.
+
+
 <br/> 
 * ngResource
 <br>
