@@ -43,7 +43,6 @@ Note that I use **JpaRepository** interface in this project..
 * To explain AngularJS further I created this repository. **[AngularJS-samples](https://github.com/Dimi7ri/AngularJS-samples)**. For official documentation, tutorials and information about **[AngularJS](https://angularjs.org/)**. </br>
 <br />
 * **[ngRoute](https://docs.angularjs.org/api/ngRoute)**  : Is a module that provides single page application functionality using routing and deeplinking services and directives. Basically, I included angular-route.min.js to my index.html and included ng-view directive. Then I added  **[$routeProvider](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider)** and **[ngRoute] (https://docs.angularjs.org/api/ngRoute/service/$route)** dependency to my app.js file. And finaly I used routeProvider and route to deep link controllers with views (htmls). As a result my webapp is now a single page app that can switch views without requesting new data to the server. 
-* 
 <br/> 
 *  **[ngResource](https://docs.angularjs.org/api/ngResource)** : is a module that interacts supporting RESTful services such as my back-end. I included angular-resource.min.js to my index.html. **[$resource](https://docs.angularjs.org/api/ngResource/service/$resource)** is a factory that helps me to avoid interacting with $http so it simplifies and assist me work with RESTful data from my server. 
 <br>
