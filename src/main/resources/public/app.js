@@ -11,6 +11,11 @@ var app = angular.module('ToDoListApp', ['ngRoute','ngResource']);
 					controller: 'AddTasksController',
 					templateUrl: '/views/addTasks.html'
 				})
+				.when('/editTask=:id',
+				{
+					controller: 'EditTasksController',
+					templateUrl: '/views/editTasks.html'
+				})
 				.otherwise({
 					redirectTo: '/'
 				})

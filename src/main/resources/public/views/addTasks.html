@@ -1,8 +1,12 @@
 <div class="container">
+	
+		<!-- ADD NEW TASKS FORM -->
 	<form name="addTasks" ng-controller="AddTasksController as addNewTaskCtrl" ng-submit="addTasks.$valid && addNewTaskCtrl.addTask(addNewTaskCtrl)" novalidate>
+			
+			<!-- TITLE -->
 		<h1><span class="glyphicon glyphicon-time"></span>Add Tasks</h1>
 			
-			<!-- Live Preview -->
+			<!-- LIVE PREVIEW -->
 		<table class="table table-bordered">
 	    	<thead>
 	      		<tr>
@@ -22,7 +26,7 @@
 	   		</tbody>
 	  	</table>
 	  	
-	  		<!-- Task Name -->		
+	  		<!-- TASK NAME -->		
         <fieldset class="form-group" ng-class="{ 'has-error' : addTasks.taskname.$invalid && !addTasks.taskname.$pristine }">
             <label class="control-label">Task Name</label>
             <input class="form-control" ng-model="addNewTaskCtrl.taskname" ng-minlength="2" ng-maxlength="30" name="taskname" placeholder="Write task name or brief description." required></input>
@@ -53,14 +57,18 @@
    			<p ng-show="addTasks.priority.$invalid && !addTasks.priority.$pristine" class="help-block">Select Priority.</p>
 		</fieldset>  	
 			
-			<!-- SUBMIT  -->
+			<!-- RETURN & SUBMIT  BUTTONS -->
 		<fieldset class="form-group">
+				<!-- RETURN  -->
 			<a href="#/">
-				<button type=button class="btn btn-default" >
+				<button type=button class="btn btn-primary" >
 					<span class="glyphicon glyphicon-arrow-left" ></span>
 				</button> 
 			</a>	
+				<!-- SUBMIT  -->
 			<input type="submit" class="btn btn-primary pull-right" value="Add Task" />
 		</fieldset>
+
 	</form>
+	
 </div>

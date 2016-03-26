@@ -7,6 +7,10 @@ app.controller('AddTasksController', function($scope, $location, AddTasksFactory
 	};
 });
 
+app.controller('EditTasksController', function($scope, $location, EditTasksFactory , $route ){
+	//todo
+});
+
 app.controller('ListTasksController', function($scope , ListTasksFactory, $route){
 	$scope.tasks = ListTasksFactory.query();
 
@@ -16,3 +20,15 @@ app.controller('TasksPrioritiesListController', function($scope, TasksPriorities
 	$scope.items = TasksPrioritiesListFactory.query();
 
 });
+
+app.controller('showActionIconsController', function($scope) {
+    
+    $scope.hoverIn = function(){
+        this.EditIcon = true;
+    };
+
+    $scope.hoverOut = function(){
+        this.EditIcon = false;
+    };
+});
+    

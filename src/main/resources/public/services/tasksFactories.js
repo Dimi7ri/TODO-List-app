@@ -6,6 +6,12 @@ app.factory('AddTasksFactory', function ($resource) {
     });
 });
 
+app.factory('EditTasksFactory', function ($resource) {
+    return $resource(serverUrl + '/tasks', {}, {
+    	query: { method: 'GET', isArray: true }
+    })
+});
+
 app.factory('ListTasksFactory', function ($resource) {
     return $resource(serverUrl + '/tasks', {}, {
     	query: { method: 'GET', isArray: true }
