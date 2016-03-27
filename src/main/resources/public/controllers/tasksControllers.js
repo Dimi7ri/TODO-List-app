@@ -7,8 +7,14 @@ app.controller('AddTasksController', function($scope, $location, AddTasksFactory
 	};
 });
 
-app.controller('EditTasksController', function($scope, $location, EditTasksFactory , $route ){
-	//todo
+app.controller('EditTasksController', function($scope, $location, $routeParams, EditTasksFactory , $route ){
+    
+    
+	this.editTasks = function(editTaskCtrl){
+		EditTasksFactory.edit(editTaskCtrl);
+		$location.path('/')
+		location.reload(true);
+	};
 });
 
 app.controller('ListTasksController', function($scope , ListTasksFactory, $route){

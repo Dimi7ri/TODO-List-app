@@ -7,9 +7,9 @@ app.factory('AddTasksFactory', function ($resource) {
 });
 
 app.factory('EditTasksFactory', function ($resource) {
-    return $resource(serverUrl + '/tasks', {}, {
-    	query: { method: 'GET', isArray: true }
-    })
+    return $resource(serverUrl + '/tasks', {id: "@id"}, {
+    	update: { method: 'PUT' }
+    });
 });
 
 app.factory('ListTasksFactory', function ($resource) {

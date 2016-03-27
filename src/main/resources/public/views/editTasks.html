@@ -1,7 +1,7 @@
 <div class="container">
 	
 		<!-- EDIT TASKS FORM -->
-	<form name="editTasks" ng-controller="EditTasksController as editTaskCtrl" ng-submit="editTasks.$valid" novalidate>
+	<form name="editTasks" ng-controller="EditTasksController as editTaskCtrl" ng-submit="editTasks.$valid && editTaskCtrl.editTask(editTaskCtrl)" autocomplete="off" novalidate>
 			
 			<!-- TITLE -->
 		<h1><span class="glyphicon glyphicon-time"></span> Edit Tasks</h1>
@@ -68,7 +68,8 @@
 				<!-- SUBMIT  -->
 			<input type="submit" class="btn btn-primary pull-right" value="Save Task" />
 		</fieldset>
-
+		{{editTasks.$valid}}
+		{{editTaskCtrl}}
 	</form>
 	
 </div>

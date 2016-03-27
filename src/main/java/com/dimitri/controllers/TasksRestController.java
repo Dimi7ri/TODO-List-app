@@ -34,30 +34,31 @@ import com.dimitri.repositories.TasksRepository;
  */
 
 @RestController
+@RequestMapping("/tasks")
 public class TasksRestController {
 	
-	@RequestMapping("/tasks")
+	@RequestMapping(method = RequestMethod.GET)
 	public Collection<Tasks> tasks(){
 		return this.tasksRepository.findAll();
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, value="/task={id}")
+	@RequestMapping(method = RequestMethod.GET, value="/{id}")
 	public Tasks getTaskDetails(@PathVariable("id") Long id){
 	    return tasksRepository.findOne(id);
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value="/tasks")
+	@RequestMapping(method = RequestMethod.POST)
 	public void saveTask(@RequestBody @Valid Tasks task){
 		task.setId(null);
 		tasksRepository.save(task);
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE, value="/task={id}")
+	@RequestMapping(method = RequestMethod.DELETE, value="/{id}")
 	public void deleteTask(@PathVariable("id") Long id){
 		tasksRepository.delete(id);
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value="/task={id}")
+	@RequestMapping(method = RequestMethod.PUT, value="/{id}")
 	public void editTask(@RequestBody @Valid Tasks editedTask ,@PathVariable("id") Long id){
 		editedTask.setId(id);
 		tasksRepository.saveAndFlush(editedTask);
