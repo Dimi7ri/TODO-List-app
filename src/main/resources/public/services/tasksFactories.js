@@ -7,7 +7,7 @@ app.factory('AddTasksFactory', function ($resource) {
 });
 
 app.factory('EditTasksFactory', function ($resource) {
-    return $resource(serverUrl + '/tasks', {id: "@id"}, {
+    return $resource(serverUrl + '/tasks/:id',{}, {
     	update: { method: 'PUT' }
     });
 });
@@ -16,6 +16,12 @@ app.factory('ListTasksFactory', function ($resource) {
     return $resource(serverUrl + '/tasks', {}, {
     	query: { method: 'GET', isArray: true }
     })
+});
+
+app.factory('ListTasksByIdFactory', function ($resource) {
+    return $resource(serverUrl + '/tasks/:id',{}, {
+    	query: { method: 'GET' }
+    });
 });
 
 app.factory('TasksPrioritiesListFactory', function ($resource) {
