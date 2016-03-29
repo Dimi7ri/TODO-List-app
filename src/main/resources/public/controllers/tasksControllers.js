@@ -1,17 +1,17 @@
-app.controller('AddTasksController', function($scope, $location, AddTasksFactory , $route ){
+app.controller('AddTasksController', function($scope, $location, AddTasksFactory, $route ){
 		
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
-		$location.path('/')
+		$location.path('/');
 		location.reload(true);
 	};
 });
 
-app.controller('EditTasksController', function($scope, $location, EditTasksFactory , $route , $routeParams ){
-		//TO DO : Add ListTasksByIdFactory method to fill up editTask form.  
+app.controller('EditTasksController', function($scope, $location, ListTasksByIdFactory, EditTasksFactory, $route, $routeParams ){
+	$scope.editTaskCtrl = ListTasksByIdFactory.query({id:$routeParams.id});
 	this.editTask = function(editTaskCtrl){
 		EditTasksFactory.update({id:$routeParams.id},editTaskCtrl);
-		$location.path('/')
+		$location.path('/');
 		location.reload(true);
 	};
 });

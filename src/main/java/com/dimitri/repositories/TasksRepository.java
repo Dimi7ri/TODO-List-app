@@ -15,6 +15,8 @@ package com.dimitri.repositories;
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import com.dimitri.models.Tasks;
 
@@ -29,6 +31,5 @@ public interface TasksRepository extends JpaRepository<Tasks, Long> {
 
 	Collection<Tasks> findBytaskname(String taskname);
 	Collection<Tasks> findBytasknameStartsWithIgnoreCase(String taskname);
-	
 	
 }

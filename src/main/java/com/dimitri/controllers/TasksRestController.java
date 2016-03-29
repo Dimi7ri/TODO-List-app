@@ -43,7 +43,7 @@ public class TasksRestController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/{id}")
-	public Tasks getTaskDetails(@PathVariable("id") Long id){
+	public Tasks getTaskById(@PathVariable("id") Long id){
 	    return tasksRepository.findOne(id);
 	}
 
