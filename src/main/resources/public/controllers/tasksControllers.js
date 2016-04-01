@@ -1,9 +1,8 @@
-app.controller('AddTasksController', function($scope, $location, AddTasksFactory, $route ){
+app.controller('AddTasksController', function($scope , $location, AddTasksFactory, $route ){
 		
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		$location.path('/');
-		location.reload(true);
 	};
 });
 
@@ -27,7 +26,6 @@ app.controller('TasksPrioritiesListController', function($scope, TasksPriorities
 });
 
 app.controller('showActionIconsController', function($scope) {
-    
     $scope.hoverIn = function(){
         this.EditIcon = true;
     };
