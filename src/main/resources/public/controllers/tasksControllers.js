@@ -8,16 +8,19 @@ app.controller('AddTasksController', function($scope , $location, AddTasksFactor
 
 app.controller('EditTasksController', function($scope, $location, ListTasksByIdFactory, EditTasksFactory, $route, $routeParams ){
 	$scope.editTaskCtrl = ListTasksByIdFactory.query({id:$routeParams.id});
-	this.editTask = function(editTaskCtrl){
-		EditTasksFactory.update({id:$routeParams.id},editTaskCtrl);
+	$scope.editedTask ={"taskname":"Batman","performdate":15,"category":"Other","priority":"MEDIUM"};
+	this.editTask = function(editedTask){
+		EditTasksFactory.update({id:$routeParams.id},editedTask);
 		$location.path('/');
-		location.reload(true);
 	};
 });
-
-app.controller('ListTasksController', function($scope , ListTasksFactory, $route){
-	$scope.tasks = ListTasksFactory.query();
-
+	
+app.controller('ListTasksController', function($scope, DataTasksFactory, ListTasksFactory, $route){
+	var task = ListTasksFactory.query();
+	task.$promise.then(function (result) {
+		DataTasksFactory.init(result);
+	    $scope.tasks = DataTasksFactory.getTasks();
+	});
 });
 
 app.controller('TasksPrioritiesListController', function($scope, TasksPrioritiesListFactory) {

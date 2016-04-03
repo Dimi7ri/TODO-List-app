@@ -29,3 +29,26 @@ app.factory('TasksPrioritiesListFactory', function ($resource) {
     	query: { method: 'GET', isArray: true }
     })
 });
+
+app.factory('DataTasksFactory', function(){
+	  var TasksList = [];
+
+	  var init = function(tasksList){
+		  TasksList = angular.copy(tasksList);
+		  angular.copy(tasksList, TasksList);
+	  };
+	  
+	  var addTask = function(newtask) {
+		  TasksList.push(newtask);
+	  };
+
+	  var getTasks = function(){
+	      return TasksList;
+	  };
+
+	  return {
+		  init : init,
+		  addTask: addTask,
+		  getTasks: getTasks
+	  };
+  });
