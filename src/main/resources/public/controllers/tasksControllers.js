@@ -1,5 +1,4 @@
 app.controller('AddTasksController', function($scope , $location, DataTasksFactory, AddTasksFactory, $route ){
-		
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		DataTasksFactory.addTask(addNewTaskCtrl);
