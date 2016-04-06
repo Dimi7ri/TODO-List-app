@@ -86,3 +86,9 @@ If any issue check: **[nobase](https://docs.angularjs.org/error/$location/nobase
 ----------app.js<br />
 ----------index.html<br />
 
+##### Separation of concerns and best practices: </br>
+* AngularJS does not oblige us to follow best practices, but it helps us to build applications that respect a standard.
+* So in this project I used all the best practices for a medium size app.
+* - Controllers manage Flow Control.
+* - Services in this case I used Factories mostly, manage output and input of data.
+* - I created a factory called DataTasksFactory that acts like a model, and contains information of all tasks and methods to retrieve and store the data.
