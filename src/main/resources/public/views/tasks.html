@@ -21,6 +21,7 @@
         		<th class="text-info"><h4>Date</h4></th>
         		<th class="text-info"><h4>Category</h4></th>
         		<th class="text-info"><h4>Priority</h4></th>
+        		<th width="150"class="text-info"><h4>Action</h4></th>
       		</tr>
     	</thead>
     	<tbody ng-controller="showActionIconsController">
@@ -30,8 +31,14 @@
         		<td>{{task.category}}</td>
         		<td>{{task.priority}}</td>
         		<td>
+        			<a href='checkTask{{task.id}}'>
+        				<span ng-show="Icon" class="glyphicon glyphicon-ok" style='font-size: 17px'></span>
+        			</a> &nbsp;
         			<a href='editTask{{task.id}}'>
-        				<span ng-show="EditIcon" class="glyphicon glyphicon-pencil" style='font-size: 17px'></span>
+        				<span ng-show="Icon" class="glyphicon glyphicon-pencil" style='font-size: 17px'></span>
+        			</a> &nbsp;
+        			<a href='deleteTask{{task.id}}'>
+        				<span ng-show="Icon" class="glyphicon glyphicon-trash" style='font-size: 17px'></span>
         			</a>
         		</td>
       		</tr>     		

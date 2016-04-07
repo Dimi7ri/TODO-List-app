@@ -32,11 +32,11 @@ app.controller('TasksPrioritiesListController', function($scope, TasksPriorities
 
 app.controller('showActionIconsController', function($scope) {
     $scope.hoverIn = function(){
-        this.EditIcon = true;
+        this.Icon = true;
     };
 
     $scope.hoverOut = function(){
-        this.EditIcon = false;
+        this.Icon = false;
     };
 });
     
