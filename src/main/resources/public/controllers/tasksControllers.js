@@ -7,12 +7,16 @@ app.controller('AddTasksController', function($scope , $location, DataTasksFacto
 });
 
 app.controller('EditTasksController', function($scope, $location, ListTasksByIdFactory, EditTasksFactory, $route, $routeParams ){
-	$scope.editTaskCtrl = ListTasksByIdFactory.query({id:$routeParams.id});
-	//to fix
+	var selectedTask = ListTasksByIdFactory.query({id:$routeParams.id});
+	selectedTask.$promise.then(function(result){
+			//Populate scope variables
+		$scope.editTaskCtrl.taskname = result.taskname;
+		$scope.editTaskCtrl.performdate = new Date(result.performdate);
+		$scope.editTaskCtrl.category = result.category;
+		$scope.editTaskCtrl.priority = result.priority;
+	});
 	this.editTask = function(editTaskCtrl){
-		//console.log($scope.editTaskCtrl);
-		//var editedTask = {"taskname":"Batman","performdate":15,"category":"Other","priority":"MEDIUM"};
-		//EditTasksFactory.update({id:$routeParams.id},editedTask);
+		EditTasksFactory.update({id:$routeParams.id},editTaskCtrl);
 		$location.path('/');
 	};
 });

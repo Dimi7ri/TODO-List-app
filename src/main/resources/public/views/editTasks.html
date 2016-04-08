@@ -39,7 +39,7 @@
 			<!-- PERFORM DATE TODO -->	
 		<fieldset class="form-group">
 			<label class="control-label">Scheduled Date</label>
-            <input class="form-control" ng-model="editTaskCtrl.performdate" required ></input>
+            <input class="form-control" type="date" ng-model="editTaskCtrl.performdate" required ></input>
 		</fieldset>
 		
 			<!-- CATEGORY -->	
@@ -70,9 +70,6 @@
 				<!-- SUBMIT  -->
 			<input type="submit" class="btn btn-primary pull-right" value="Save Task" />
 		</fieldset>
-		{{editTasks.$valid}}
-
-		{{editTaskCtrl}}
 	</form>
 	
 </div>

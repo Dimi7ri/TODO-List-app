@@ -35,7 +35,6 @@ app.factory('DataTasksFactory', function(){
 
 	  var init = function(tasksList){
 		  TasksList = angular.copy(tasksList);
-		  angular.copy(tasksList, TasksList);
 	  };
 	  
 	  var addTask = function(newtask) {
