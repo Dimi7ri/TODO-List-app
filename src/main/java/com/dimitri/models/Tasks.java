@@ -47,11 +47,23 @@ public class Tasks {
 	@Enumerated(EnumType.STRING)
 	private Priority priority;
 	
-	public Tasks(String taskname, Date performdate, String category, Priority priority){
+	@NotNull
+	private Boolean isdone;
+	
+	public Boolean getIsdone() {
+		return isdone;
+	}
+
+	public void setIsdone(Boolean isdone) {
+		this.isdone = isdone;
+	}
+
+	public Tasks(String taskname, Date performdate, String category, Priority priority, Boolean isdone){
 		this.taskname = taskname;
 		this.performdate = performdate;
 		this.category = category;
 		this.priority = priority;
+		this.isdone = false;
 	}
 
 	public Tasks(){
@@ -84,4 +96,5 @@ public class Tasks {
 	public Priority getPriority() {
 		return priority;
 	}
+
 }
