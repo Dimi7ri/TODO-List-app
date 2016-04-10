@@ -55,7 +55,10 @@
    				<option value="" selected>Select Priority</option>
    			</select>
    			<p ng-show="addTasks.priority.$invalid && !addTasks.priority.$pristine" class="help-block">Select Priority.</p>
-		</fieldset>  	
+		</fieldset> 
+		
+			<!-- ISDONE to false -->
+		<div ng-init="addNewTaskCtrl.isdone = 'false'"></div>	
 			
 			<!-- RETURN & SUBMIT  BUTTONS -->
 		<fieldset class="form-group">

@@ -14,6 +14,7 @@ app.controller('EditTasksController', function($scope, $location, ListTasksByIdF
 		$scope.editTaskCtrl.performdate = new Date(result.performdate);
 		$scope.editTaskCtrl.category = result.category;
 		$scope.editTaskCtrl.priority = result.priority;
+		$scope.editTaskCtrl.isdone = result.isdone;
 	});
 	this.editTask = function(editTaskCtrl){
 		EditTasksFactory.update({id:$routeParams.id},editTaskCtrl);

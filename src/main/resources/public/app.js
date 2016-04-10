@@ -1,7 +1,12 @@
 var app = angular.module('ToDoListApp', ['ngRoute','ngResource']);
 
 		app.config(function($routeProvider, $locationProvider){
-				$routeProvider.when('/',
+			$locationProvider.html5Mode({
+				enabled: true,
+				requireBase: false
+			});
+				$routeProvider
+				.when('/',
 				{
 					controller: 'ListTasksController',
 					templateUrl: '/views/tasks.html'
@@ -19,8 +24,6 @@ var app = angular.module('ToDoListApp', ['ngRoute','ngResource']);
 				.otherwise({
 					redirectTo: '/'
 				})
-				$locationProvider.html5Mode({
-					enabled: true,
-					requireBase: false
-				});
+
 		});
+		
