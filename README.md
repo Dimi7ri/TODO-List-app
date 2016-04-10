@@ -4,7 +4,7 @@
 * **[REST](https://spring.io/understanding/REST)** 
 * Hibernate (Using Spring Data JPA)
 * HTML5
-* AngularJS (v1.5.0)
+* AngularJS (v1.5.3)
 * Bootstrap (v3.3.6)
 
 ---
