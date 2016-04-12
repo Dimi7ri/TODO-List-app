@@ -2,6 +2,9 @@ app.controller('AddTasksController', function($scope , $location, DataTasksFacto
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		DataTasksFactory.addTask(addNewTaskCtrl);
+		$location.path('/addTask');
+		$location.path('/');
+		$location.path('/addTask');
 		$location.path('/');
 	};
 });
@@ -11,6 +14,7 @@ app.controller('EditTasksController', function($scope, $location, ListTasksByIdF
 	var selectedTask = ListTasksByIdFactory.query({id:$routeParams.id});
 	selectedTask.$promise.then(function(result){
 			//Populate scope variables
+		$scope.editTaskCtrl = $scope.editTaskCtrl || {};
 		$scope.editTaskCtrl.taskname = result.taskname;
 		$scope.editTaskCtrl.performdate = new Date(result.performdate);
 		$scope.editTaskCtrl.category = result.category;
