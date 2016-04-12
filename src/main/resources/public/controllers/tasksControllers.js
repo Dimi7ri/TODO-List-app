@@ -2,9 +2,6 @@ app.controller('AddTasksController', function($scope , $location, DataTasksFacto
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		DataTasksFactory.addTask(addNewTaskCtrl);
-		$location.path('/addTask');
-		$location.path('/');
-		$location.path('/addTask');
 		$location.path('/');
 	};
 });
