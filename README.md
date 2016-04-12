@@ -5,7 +5,7 @@
 * Hibernate (Using Spring Data JPA)
 * HTML5
 * AngularJS (v1.5.3)
-* Bootstrap (v3.3.6)
+* Bootstrap (v3.2.0)  
 
 ---
 
