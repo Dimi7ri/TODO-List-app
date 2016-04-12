@@ -92,3 +92,8 @@ If any issue check: **[nobase](https://docs.angularjs.org/error/$location/nobase
 * --- Controllers manage Flow Control.
 * --- Services in this case I used Factories mostly, manage output and input of data.
 * --- DataTasksFactory a Factory that contains information of all tasks and methods to retrieve and store the instance data.
+* 
+##### DateTimePicker </br>
+* Added Angular UI Bootstrap Date Time Picker by zhaber,**[angular-js-bootstrap-datetimepicker](https://github.com/zhaber/angular-js-bootstrap-datetimepicker)**
+* I customized a little bit this project to make it fit to my TODO-List-app. I'm very happy with the outcome. The tool works on Chrome and Firefox, gonna test it on other browsers also.
+* Basically I use DateTimerPicker in my AddTask and EditTask functionalities. The result is an elegantly embedded calendar and timer.
