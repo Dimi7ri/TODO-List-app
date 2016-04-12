@@ -12,6 +12,12 @@ app.factory('EditTasksFactory', function ($resource) {
     });
 });
 
+app.factory('DeleteTasksFactory', function ($resource) {
+    return $resource(serverUrl + '/tasks/:id',{}, {
+    	delete_task: { method: 'DELETE' }
+    });
+});
+
 app.factory('ListTasksFactory', function ($resource) {
     return $resource(serverUrl + '/tasks', {}, {
     	query: { method: 'GET', isArray: true }

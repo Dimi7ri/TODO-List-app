@@ -1,7 +1,7 @@
 <div class="container">
 
 		<!-- TITLE -->
-   	<h1><span class="glyphicon glyphicon-time"></span> Pending tasks</h1>
+   	<h1><span class="glyphicon glyphicon-check"></span> Completed tasks</h1>
    	
    		<!-- LIVE SEARCH -->
 	<div class="col-xs-4">
@@ -25,18 +25,12 @@
       		</tr>
     	</thead>
     	<tbody ng-controller="TasksActionsController">
-      		<tr ng-repeat="task in tasks | filter:searchText | filter: { isdone:'false'} | orderBy:'-id'" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+      		<tr ng-repeat="task in tasks | filter:searchText | filter: { isdone:'true'} | orderBy:'-id'" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
         		<td>{{task.taskname}}</td>
         		<td>{{task.performdate | date:'dd/MM/yyyy @ h:mma'}}</td>
         		<td>{{task.category}}</td>
         		<td>{{task.priority}}</td>
         		<td>
-        			<a ng-href='check Task Id: {{task.id}}' ng-click='checkTask(task.id)'>
-        				<span ng-show="Icon" class="glyphicon glyphicon-ok" style='font-size: 17px'></span>
-        			</a> &nbsp;
-        			<a href='editTask{{task.id}}'>
-        				<span ng-show="Icon" class="glyphicon glyphicon-pencil" style='font-size: 17px'></span>
-        			</a> &nbsp;
         			<a ng-href='delete Task Id: {{task.id}}' ng-click='deleteTask(task.id)'>
         				<span ng-show="Icon" class="glyphicon glyphicon-trash" style='font-size: 17px'></span>
         			</a>
@@ -46,16 +40,9 @@
   	</table>
   	
   		<!-- LOWER BUTTONS -->
-  		
-  	<a href="addTask">
+	<a href="/">
 		<button type=button class="btn btn-primary" >
-			<span class="glyphicon glyphicon-plus" ></span>
-		</button> 
-	</a>
-	
-  	<a href="completedTasks">
-		<button type=button class="btn btn-primary" >
-			<span class="glyphicon glyphicon-list-alt" ></span>
+			<span class="glyphicon glyphicon-arrow-left" ></span>
 		</button> 
 	</a>	
 </div>

@@ -21,6 +21,11 @@ var app = angular.module('ToDoListApp', ['ngRoute','ngResource']);
 					controller: 'EditTasksController',
 					templateUrl: '/views/editTasks.html'
 				})
+				.when('/completedTasks',
+				{
+					controller: 'ListTasksController',
+					templateUrl: '/views/completedTasks.html'
+				})				
 				.otherwise({
 					redirectTo: '/'
 				})
