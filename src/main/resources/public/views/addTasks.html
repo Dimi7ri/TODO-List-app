@@ -37,7 +37,7 @@
 			<!-- PERFORM DATE -->	
 		<fieldset class="form-group">
 			<label class="control-label">Scheduled Date</label>
-              <div ng-controller="DateTimePickerController" class="container">
+              <div ng-controller="DateTimePickerController" ng-init="addNewTaskCtrl.performdate = now" class="container">
 				<datetimepicker 
       				min-date="minDate" 
       				hour-step="hourStep" 
@@ -47,7 +47,8 @@
       				datepicker-append-to-body="false"
       				readonly-date="false"
       				hidden-time="false"
-      				hidden-date="false" 
+      				hidden-date="false"
+      				ng-required="true"
       				name="datetimepicker"
       				show-spinners="true"
       				readonly-time="false"

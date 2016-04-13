@@ -37,6 +37,8 @@ public class Tasks {
 	@NotNull
 	@Size(min=2, max=30)
 	private String taskname;
+	
+	@NotNull
 	private Date performdate;
 	
 	@NotNull

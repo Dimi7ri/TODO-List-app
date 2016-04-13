@@ -1,4 +1,7 @@
 app.controller('AddTasksController', function($scope , $location, DataTasksFactory, AddTasksFactory, $route ){
+		//Setting Now + 5 minutes as default date for datetimepicker.
+	$scope.now = new Date();
+	$scope.now.setMinutes($scope.now.getMinutes() + 5);
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		DataTasksFactory.addTask(addNewTaskCtrl);

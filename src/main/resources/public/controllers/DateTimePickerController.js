@@ -6,8 +6,8 @@ app.controller('DateTimePickerController',function ($scope, $timeout) {
   
 	$scope.toggleMinDate = function() {
 		var minDate = new Date();
-			// set to yesterday
-		minDate.setDate(minDate.getDate() - 1);
+			//Minimum date set to now
+		minDate.setDate(minDate.getDate());
 		$scope.minDate = $scope.minDate ? null : minDate;
 	};
    
