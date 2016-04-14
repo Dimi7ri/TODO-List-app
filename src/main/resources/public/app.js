@@ -1,6 +1,6 @@
 var app = angular.module('ToDoListApp', ['ngRoute','ngResource','ui.bootstrap', 'ui.bootstrap.datetimepicker']);
 
-		app.config(function($routeProvider, $locationProvider){
+		app.config(function($routeProvider){
 				$routeProvider
 				.when('/',
 				{
@@ -23,7 +23,7 @@ var app = angular.module('ToDoListApp', ['ngRoute','ngResource','ui.bootstrap', 
 					templateUrl: '/views/completedTasks.html'
 				})				
 				.otherwise({
-					redirectTo: '/'
+					redirectTo: '/#'
 				})
 
 		});
