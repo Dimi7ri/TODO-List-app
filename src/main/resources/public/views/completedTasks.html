@@ -26,7 +26,7 @@
     	</thead>
     	<tbody ng-controller="TasksActionsController">
       		<tr ng-repeat="task in tasks | filter:searchText | filter: { isdone:'true'} | orderBy:'-id'" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
-        		<td>{{task.taskname}}</td>
+        		<td><del>{{task.taskname}}</del></td>
         		<td>{{task.performdate | date:'dd/MM/yyyy @ h:mma'}}</td>
         		<td>{{task.category}}</td>
         		<td>{{task.priority}}</td>

@@ -17,11 +17,6 @@ app.controller('DateTimePickerController',function ($scope, $timeout) {
 		showWeeks: false
 	};
   
-		// Disable weekend selection
-	$scope.disabled = function(calendarDate, mode) {
-		return mode === 'day' && ( calendarDate.getDay() === 0 || calendarDate.getDay() === 6 );
-	};
-  
 	$scope.open = function($event,opened) {
 		$event.preventDefault();
 		$event.stopPropagation();
@@ -31,12 +26,7 @@ app.controller('DateTimePickerController',function ($scope, $timeout) {
 	$scope.dateOpened = false;
 	$scope.hourStep = 1;
 	$scope.format = "dd-MM-yyyy";
-	$scope.minuteStep = 15;
-
-	$scope.timeOptions = {
-		hourStep: [1, 2, 3],
-		minuteStep: [1, 5, 10, 15, 25, 30]
-	};
+	$scope.minuteStep = 1;
 
 	$scope.showMeridian = true;
 	$scope.timeToggleMode = function() {
