@@ -28,7 +28,7 @@ app.controller('EditTasksController', function($scope, $location, ListTasksByIdF
 	};
 });
 	
-app.controller('ListTasksController', function($scope, DataTasksFactory, ListTasksFactory, $route){
+app.controller('ListTasksController', function($scope, $location,  DataTasksFactory, ListTasksFactory, $route){
 	var task = ListTasksFactory.query();
 	task.$promise.then(function (result) {
 		DataTasksFactory.init(result);
@@ -54,15 +54,9 @@ app.controller('TasksActionsController', function($scope, $location, ListTasksBy
     $scope.checkTask = function(taskid) {
     	var selectedTask = ListTasksByIdFactory.query({id:taskid});
     	selectedTask.$promise.then(function(result){
-    			//Populate function variables to generate PUT request.
-    		selectedTask.taskname = result.taskname;
-    		selectedTask.performdate = new Date(result.performdate);
-    		selectedTask.category = result.category;
-    		selectedTask.priority = result.priority;
     			//Checking task makes isdone = "true"
-    		selectedTask.isdone = "true";
-    		
-    		EditTasksFactory.update({id:taskid},selectedTask);
+    		result.isdone = "true";
+    		EditTasksFactory.update({id:taskid},result);
     	});
     	location.reload(true);
      };
