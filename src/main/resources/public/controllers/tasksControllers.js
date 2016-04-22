@@ -5,7 +5,11 @@ app.controller('AddTasksController', function($scope , $location, DataTasksFacto
 	this.addTask = function(addNewTaskCtrl){
 		AddTasksFactory.save(addNewTaskCtrl);
 		DataTasksFactory.addTask(addNewTaskCtrl);
-		$location.path('/');
+		
+		window.setTimeout(function() {
+			$location.path('/');
+        }, 10); 
+		
 	};
 });
 
@@ -24,7 +28,11 @@ app.controller('EditTasksController', function($scope, $location, ListTasksByIdF
 	
 	this.editTask = function(editTaskCtrl){
 		EditTasksFactory.update({id:$routeParams.id},editTaskCtrl);
-		$location.path('/');
+		
+		window.setTimeout(function() {
+			$location.path('/');
+        }, 10); 
+		
 	};
 });
 	
@@ -38,7 +46,6 @@ app.controller('ListTasksController', function($scope, $location,  DataTasksFact
 
 app.controller('TasksPrioritiesListController', function($scope, TasksPrioritiesListFactory) {
 	$scope.items = TasksPrioritiesListFactory.query();
-
 });
 
 app.controller('TasksActionsController', function($scope, $location, ListTasksByIdFactory, EditTasksFactory, DeleteTasksFactory) {
@@ -57,15 +64,23 @@ app.controller('TasksActionsController', function($scope, $location, ListTasksBy
     			//Checking task makes isdone = "true"
     		result.isdone = "true";
     		EditTasksFactory.update({id:taskid},result);
+    		
+    		window.setTimeout(function() {
+    			location.reload(true);
+            }, 10);
+    		
     	});
-    	location.reload(true);
      };
      
     // <<-- EditTask has its separate controller: EditTasksController.
      
     $scope.deleteTask = function(taskid) {
         DeleteTasksFactory.delete_task({id:taskid},null);
-		location.reload(true);
+        
+		window.setTimeout(function() {
+			location.reload(true);
+        }, 10);
+		
      };
 });
     

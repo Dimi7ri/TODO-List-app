@@ -38,8 +38,8 @@ import com.dimitri.repositories.TasksRepository;
 public class TasksRestController {
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public Collection<Tasks> tasks(){
-		return this.tasksRepository.findAll();
+	public Collection<Tasks> tasks(){	
+		return this.tasksRepository.findAllCustom();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/{id}")

@@ -52,14 +52,6 @@ public class Tasks {
 	@NotNull
 	private Boolean isdone;
 	
-	public Boolean getIsdone() {
-		return isdone;
-	}
-
-	public void setIsdone(Boolean isdone) {
-		this.isdone = isdone;
-	}
-
 	public Tasks(String taskname, Date performdate, String category, Priority priority, Boolean isdone){
 		this.taskname = taskname;
 		this.performdate = performdate;
@@ -97,6 +89,10 @@ public class Tasks {
 
 	public Priority getPriority() {
 		return priority;
+	}
+	
+	public Boolean getIsdone() {
+		return isdone;
 	}
 
 }
