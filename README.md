@@ -47,23 +47,6 @@ Note that I use **JpaRepository** interface in this project..
 <br/> 
 *  **[ngResource](https://docs.angularjs.org/api/ngResource)** : is a module that interacts supporting RESTful services such as my back-end. I included angular-resource.min.js to my index.html. **[$resource](https://docs.angularjs.org/api/ngResource/service/$resource)** is a factory that helps me to avoid interacting with $http so it simplifies and assist me work with RESTful data from my server. 
 <br>
-**[$locationProvider](https://docs.angularjs.org/api/ng/provider/$locationProvider)** I used locationProvider HTML5 mode to remove /# in the URLs. Since I'm using $routeProvider I needed to edit app.js this way.
-* I included:
-  $locationProvider.html5Mode({
-  enabled: true,
-  requireBase: false
-  });
-* I replaced:
-```html
-
-  <!-- Before: -->
-<a href="#/addTask">..
-
-  <!-- After: -->
-<a href="addTask">...
-```
-If any issue check: **[nobase](https://docs.angularjs.org/error/$location/nobase)**
-<br>
 
 ##### The front-end of this project is structured this way: </br>
 /public<br />
